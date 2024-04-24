@@ -1,4 +1,4 @@
-class RestaurantManagement:
+class EmployeeManagement:
     def __init__(self, name):
         self.name = name
         self.employees = [] # this ends up being the worker database
