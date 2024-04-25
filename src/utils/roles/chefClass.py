@@ -1,14 +1,22 @@
 from utils.roles.basicClass import BasicClass
+from utils.roles.basicClass import BasicClass
 
 class ChefClass(BasicClass):
-    def __init__(self, name, specialty):
+    def __init__(self, name, order, menuItem):
         super().__init__(name)
-        self.specialty = specialty
+        self.order = order
+        self.menuItem = menuItem
 
-    def cook(self, dish):
-        print(f"{self.name} is cooking {dish}.")
+    def get_order(self):
+        return self.order
 
-    def serve(self, dish):
-        print(f"{self.name} is serving {dish}.")
+    def set_order(self, order):
+        self.order = order
+
+    def get_menuItem(self):
+        return self.menuItem
+    
+    def set_menuItem(self, menuItem):
+        self.menuItem = menuItem
 
 
