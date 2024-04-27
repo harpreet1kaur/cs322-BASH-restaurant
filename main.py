@@ -2,6 +2,7 @@ import pygame
 from src.services.buttonMaker import makeButton
 from src.utils.MenuRender.waiterButton import run_waiter_button
 from src.utils.MenuRender.chefButton import run_chef_button
+from src.utils.MenuRender.managerButton import insert_new_text, run_stats_button
 
 def main():
     pygame.init()
@@ -29,6 +30,8 @@ def main():
                     run_waiter_button()
                 if ManagerButton.collidepoint(event.pos):
                     print("manager Button clicked!")
+                    insert_new_text("New Example Text")
+                    run_stats_button()
 
         pygame.display.flip()
 
