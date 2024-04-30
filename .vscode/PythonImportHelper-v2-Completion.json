@@ -68,6 +68,86 @@
         "documentation": {}
     },
     {
+        "label": "EmployeeManagement",
+        "importPath": "src.components.EmployementManagementSystem",
+        "description": "src.components.EmployementManagementSystem",
+        "isExtraImport": true,
+        "detail": "src.components.EmployementManagementSystem",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "importPath": "src.components.MenuManagement",
+        "description": "src.components.MenuManagement",
+        "isExtraImport": true,
+        "detail": "src.components.MenuManagement",
+        "documentation": {}
+    },
+    {
+        "label": "Menu",
+        "importPath": "src.components.MenuManagement",
+        "description": "src.components.MenuManagement",
+        "isExtraImport": true,
+        "detail": "src.components.MenuManagement",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "importPath": "src.components.OrderManagement",
+        "description": "src.components.OrderManagement",
+        "isExtraImport": true,
+        "detail": "src.components.OrderManagement",
+        "documentation": {}
+    },
+    {
+        "label": "TableOrder",
+        "importPath": "src.components.OrderManagement",
+        "description": "src.components.OrderManagement",
+        "isExtraImport": true,
+        "detail": "src.components.OrderManagement",
+        "documentation": {}
+    },
+    {
+        "label": "Orders",
+        "importPath": "src.components.OrderManagement",
+        "description": "src.components.OrderManagement",
+        "isExtraImport": true,
+        "detail": "src.components.OrderManagement",
+        "documentation": {}
+    },
+    {
+        "label": "TableManagement",
+        "importPath": "src.components.tablemanagement",
+        "description": "src.components.tablemanagement",
+        "isExtraImport": true,
+        "detail": "src.components.tablemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "Role",
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "isExtraImport": true,
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "Employee",
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "isExtraImport": true,
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "RoleManagementSystem",
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "isExtraImport": true,
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
         "label": "BasicClass",
         "importPath": "utils.roles.basicClass",
         "description": "utils.roles.basicClass",
@@ -126,10 +206,10 @@
     {
         "label": "TestChefButton",
         "kind": 6,
-        "importPath": ".tests.chefTest",
-        "description": ".tests.chefTest",
-        "peekOfCode": "class TestChefButton(unittest.TestCase):\n    def setUp(self):\n        pygame.init()\n        self.screen = pygame.display.set_mode((800, 800))\n        self.box_rect = pygame.Rect(400, 400, 150, 200)\n        self.font = pygame.font.Font(None, 24)\n    def test_chef_clicked(self):\n        self.assertEqual(chef_clicked(self.screen, self.box_rect, False, self.font), True)\n        pygame.mouse.set_pos((450, 450))\n        self.assertEqual(chef_clicked(self.screen, self.box_rect, True, self.font), True)",
-        "detail": ".tests.chefTest",
+        "importPath": ".tests.tests",
+        "description": ".tests.tests",
+        "peekOfCode": "class TestChefButton(unittest.TestCase):\n    def setUp(self):\n        pygame.init()\n        self.screen = pygame.display.set_mode((800, 800))\n        self.box_rect = pygame.Rect(400, 400, 150, 200)\n        self.font = pygame.font.Font(None, 24)\n        self.employee_management = EmployeeManagement(\"Test\")\n        self.item1 = Item(\"Chicken\", 10.0, 1, 5.0, True)\n        self.item2 = Item(\"Beef\", 15.0, 2, 7.5, True)\n        self.menu = Menu()",
+        "detail": ".tests.tests",
         "documentation": {}
     },
     {
@@ -157,6 +237,15 @@
         "description": "src.components.MenuManagement",
         "peekOfCode": "class Menu:\n    #constructor\n    def __init__(self):\n        self.items = []\n    #add item to the menu\n    def add_item(self, item):\n        self.items.append(item)\n    #remove item from the menu\n    def  remove_item(self, item):\n        self.items.reove(item)",
         "detail": "src.components.MenuManagement",
+        "documentation": {}
+    },
+    {
+        "label": "menu_items",
+        "kind": 5,
+        "importPath": "src.components.menu_items",
+        "description": "src.components.menu_items",
+        "peekOfCode": "menu_items = {\n    \"Pizza\": {\"available\": True, \"cost\": 10.99},\n    \"Burger\": {\"available\": True, \"cost\": 8.99},\n    \"Salad\": {\"available\": True, \"cost\": 7.99},\n    \"Pasta\": {\"available\": True, \"cost\": 12.99},\n    \"Steak\": {\"available\": True, \"cost\": 19.99}\n}",
+        "detail": "src.components.menu_items",
         "documentation": {}
     },
     {
