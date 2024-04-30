@@ -24,8 +24,13 @@ def run_waiter_button():
     # Create a rectangle for the box
     box_rect = pygame.Rect(screen_width // 2 + 75, screen_height // 2 - 125, 150, 200)
 
+    # Create button rectangles for the menu items
+    chicken_rect = pygame.Rect(screen_width // 2 - 150, screen_height - 75, 100, 50)
+    beef_rect = pygame.Rect(screen_width // 2 - 50, screen_height - 75, 100, 50)
+    carrots_rect = pygame.Rect(screen_width // 2 + 50, screen_height - 75, 100, 50)
+
     font = pygame.font.Font(None, 24)  # Font for the order text
-    order_text = ["Orders:", "Table 1: Chicken"]
+    order_text = ["Orders:", "Table 1:"]
 
     display_box = False
 
@@ -45,12 +50,27 @@ def run_waiter_button():
                         display_box = table_clicked(screen, box_rect, display_box)
                     elif display_box and box_rect.collidepoint(event.pos):
                         display_box = False
+                    elif chicken_rect.collidepoint(event.pos):
+                        order_text[1] = "Table 1: Chicken"  # Update the "Table 1" order
+                    elif beef_rect.collidepoint(event.pos):
+                        order_text[1] = "Table 1: Beef"  # Update the "Table 1" order
+                    elif carrots_rect.collidepoint(event.pos):
+                        order_text[1] = "Table 1: Carrots"  # Update the "Table 1" order
 
         pygame.draw.rect(screen, (0, 0, 255), table_rect)  # Draw the table rectangle
+        screen.blit(font.render("Table 1", True, (0, 0, 0)), (table_rect.x + 10, table_rect.y + 10))  # Draw "Table 1" on the table rectangle
+
+        pygame.draw.rect(screen, (0, 255, 0), chicken_rect)  # Draw the chicken button
+        pygame.draw.rect(screen, (0, 255, 0), beef_rect)  # Draw the beef button
+        pygame.draw.rect(screen, (0, 255, 0), carrots_rect)  # Draw the carrots button
+
+        # Draw the text on the buttons
+        screen.blit(font.render("Chicken", True, (0, 0, 0)), (chicken_rect.x + 10, chicken_rect.y + 10))
+        screen.blit(font.render("Beef", True, (0, 0, 0)), (beef_rect.x + 30, beef_rect.y + 10))
+        screen.blit(font.render("Carrots", True, (0, 0, 0)), (carrots_rect.x + 10, carrots_rect.y + 10))
 
         if display_box:
             pygame.draw.rect(screen, (255, 90, 0), box_rect)
-            pygame.draw.line(screen, (0, 0, 0), (table_rect.right, table_rect.centery), (box_rect.left, box_rect.centery), 2)  # Draw a line from the table to the box
             for i, line in enumerate(order_text):
                 order_surface = font.render(line, True, (0, 0, 0))  # Black text
                 screen.blit(order_surface, (box_rect.x + 10, box_rect.y + 10 + i*30))  # Draw the text inside the box

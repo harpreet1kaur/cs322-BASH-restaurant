@@ -29,7 +29,21 @@ class Order:
             self.items.remove(item)
         else:
             print("Item not in the order")
-    
+
+class TableOrder:
+    def __init__(self, table_number):
+        self.table_number = table_number
+        self.orders = []
+
+    def add_order(self, order):
+        self.orders.append(order)
+
+    def remove_order(self, order):
+        if order in self.orders:
+            self.orders.remove(order)
+        else:
+            print("Order not in the table")
+
 #class to manage order
 class Orders():
     #constructor
@@ -78,10 +92,3 @@ class Orders():
         for order in self.orders:
             index = self.orders.index(order)
             order.setNumber(index)
-
-
-
-
-
-        
-

@@ -79,9 +79,3 @@ def run_chef_button():
         pygame.display.flip()
 
     pygame.quit()
-
-def main():
-    run_chef_button()
-
-if __name__ == "__main__":
-    main()

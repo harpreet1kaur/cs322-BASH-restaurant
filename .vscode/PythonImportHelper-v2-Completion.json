@@ -1,0 +1,441 @@
+[
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
+        "label": "chef_clicked",
+        "importPath": "src.utils.MenuRender.chefButton",
+        "description": "src.utils.MenuRender.chefButton",
+        "isExtraImport": true,
+        "detail": "src.utils.MenuRender.chefButton",
+        "documentation": {}
+    },
+    {
+        "label": "run_chef_button",
+        "importPath": "src.utils.MenuRender.chefButton",
+        "description": "src.utils.MenuRender.chefButton",
+        "isExtraImport": true,
+        "detail": "src.utils.MenuRender.chefButton",
+        "documentation": {}
+    },
+    {
+        "label": "table_clicked",
+        "importPath": "src.utils.MenuRender.waiterButton",
+        "description": "src.utils.MenuRender.waiterButton",
+        "isExtraImport": true,
+        "detail": "src.utils.MenuRender.waiterButton",
+        "documentation": {}
+    },
+    {
+        "label": "run_waiter_button",
+        "importPath": "src.utils.MenuRender.waiterButton",
+        "description": "src.utils.MenuRender.waiterButton",
+        "isExtraImport": true,
+        "detail": "src.utils.MenuRender.waiterButton",
+        "documentation": {}
+    },
+    {
+        "label": "BasicClass",
+        "importPath": "utils.roles.basicClass",
+        "description": "utils.roles.basicClass",
+        "isExtraImport": true,
+        "detail": "utils.roles.basicClass",
+        "documentation": {}
+    },
+    {
+        "label": "BasicClass",
+        "importPath": "utils.roles.basicClass",
+        "description": "utils.roles.basicClass",
+        "isExtraImport": true,
+        "detail": "utils.roles.basicClass",
+        "documentation": {}
+    },
+    {
+        "label": "BasicClass",
+        "importPath": "utils.roles.basicClass",
+        "description": "utils.roles.basicClass",
+        "isExtraImport": true,
+        "detail": "utils.roles.basicClass",
+        "documentation": {}
+    },
+    {
+        "label": "BasicClass",
+        "importPath": "utils.roles.basicClass",
+        "description": "utils.roles.basicClass",
+        "isExtraImport": true,
+        "detail": "utils.roles.basicClass",
+        "documentation": {}
+    },
+    {
+        "label": "makeButton",
+        "importPath": "src.services.buttonMaker",
+        "description": "src.services.buttonMaker",
+        "isExtraImport": true,
+        "detail": "src.services.buttonMaker",
+        "documentation": {}
+    },
+    {
+        "label": "insert_new_text",
+        "importPath": "src.utils.MenuRender.managerButton",
+        "description": "src.utils.MenuRender.managerButton",
+        "isExtraImport": true,
+        "detail": "src.utils.MenuRender.managerButton",
+        "documentation": {}
+    },
+    {
+        "label": "run_stats_button",
+        "importPath": "src.utils.MenuRender.managerButton",
+        "description": "src.utils.MenuRender.managerButton",
+        "isExtraImport": true,
+        "detail": "src.utils.MenuRender.managerButton",
+        "documentation": {}
+    },
+    {
+        "label": "TestChefButton",
+        "kind": 6,
+        "importPath": ".tests.chefTest",
+        "description": ".tests.chefTest",
+        "peekOfCode": "class TestChefButton(unittest.TestCase):\n    def setUp(self):\n        pygame.init()\n        self.screen = pygame.display.set_mode((800, 800))\n        self.box_rect = pygame.Rect(400, 400, 150, 200)\n        self.font = pygame.font.Font(None, 24)\n    def test_chef_clicked(self):\n        self.assertEqual(chef_clicked(self.screen, self.box_rect, False, self.font), True)\n        pygame.mouse.set_pos((450, 450))\n        self.assertEqual(chef_clicked(self.screen, self.box_rect, True, self.font), True)",
+        "detail": ".tests.chefTest",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeManagement",
+        "kind": 6,
+        "importPath": "src.components.EmployementManagementSystem",
+        "description": "src.components.EmployementManagementSystem",
+        "peekOfCode": "class EmployeeManagement:\n    def __init__(self, name):\n        self.name = name\n        self.employees = [] # this ends up being the worker database\n    def fetch(self, username, password):\n        for employee in self.employees:\n            if employee['name'] == username and employee['password'] == password:\n                return employee\n        return False\n    def addUser(self, name, password, employee_id, role):",
+        "detail": "src.components.EmployementManagementSystem",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "src.components.MenuManagement",
+        "description": "src.components.MenuManagement",
+        "peekOfCode": "class Item:\n    #constructor\n    def __init__(self, name, price, ID, cost, status):\n        self.name = name\n        self.price = price\n        self.ID = ID\n        self.cost = cost\n        self.status = status\n    #update the new price\n    def update_price(self,price):",
+        "detail": "src.components.MenuManagement",
+        "documentation": {}
+    },
+    {
+        "label": "Menu",
+        "kind": 6,
+        "importPath": "src.components.MenuManagement",
+        "description": "src.components.MenuManagement",
+        "peekOfCode": "class Menu:\n    #constructor\n    def __init__(self):\n        self.items = []\n    #add item to the menu\n    def add_item(self, item):\n        self.items.append(item)\n    #remove item from the menu\n    def  remove_item(self, item):\n        self.items.reove(item)",
+        "detail": "src.components.MenuManagement",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "kind": 6,
+        "importPath": "src.components.OrderManagement",
+        "description": "src.components.OrderManagement",
+        "peekOfCode": "class Order:\n    #constructor\n    def __init__ (self):\n        #a number will be assigned later on in Orders\n        self.orderNumber = 0\n        #a list to store item in an order\n        self.items = []\n        #a boolean status with true being the order haven't finish\n        self.status = True\n    #set number status",
+        "detail": "src.components.OrderManagement",
+        "documentation": {}
+    },
+    {
+        "label": "TableOrder",
+        "kind": 6,
+        "importPath": "src.components.OrderManagement",
+        "description": "src.components.OrderManagement",
+        "peekOfCode": "class TableOrder:\n    def __init__(self, table_number):\n        self.table_number = table_number\n        self.orders = []\n    def add_order(self, order):\n        self.orders.append(order)\n    def remove_order(self, order):\n        if order in self.orders:\n            self.orders.remove(order)\n        else:",
+        "detail": "src.components.OrderManagement",
+        "documentation": {}
+    },
+    {
+        "label": "Orders",
+        "kind": 6,
+        "importPath": "src.components.OrderManagement",
+        "description": "src.components.OrderManagement",
+        "peekOfCode": "class Orders():\n    #constructor\n    def __init__(self):\n        self.orders = []\n        self.completedOrder = []\n    #get the order with the given index from the order system\n    def getOrder(self, index):\n        if (self.orders.__sizeof__ - 1 > index):\n            return (self.orders[index])\n        else:",
+        "detail": "src.components.OrderManagement",
+        "documentation": {}
+    },
+    {
+        "label": "TableManagement",
+        "kind": 6,
+        "importPath": "src.components.restrauntManagement",
+        "description": "src.components.restrauntManagement",
+        "peekOfCode": "class TableManagement:\n    def __init__(self, total_tables):\n        self.tables = {i: 'available' for i in range(1, total_tables+1)}\n        self.menu = \"\"\n    def accessTable(self, num):\n        if num not in self.tables:\n            return \"Invalid table number\"\n        if self.tables[num] == 'available':\n            return f\"Table {num} is available\"\n        else:",
+        "detail": "src.components.restrauntManagement",
+        "documentation": {}
+    },
+    {
+        "label": "Role",
+        "kind": 6,
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "peekOfCode": "class Role:\n    def __init__(self, name, permissions=None):\n        self.name = name\n        self.permissions = permissions or []\n    def add_permission(self, system_name):\n        self.permissions.append(system_name)\n    def has_permission(self, system_name):\n        return system_name in self.permissions\nclass RoleManagementSystem:\n    def __init__(self):",
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "RoleManagementSystem",
+        "kind": 6,
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "peekOfCode": "class RoleManagementSystem:\n    def __init__(self):\n        self.roles = {}\n    def create_role(self, name, permissions=None):\n        role = Role(name, permissions)\n        self.roles[name] = role\n    def assign_role(self, employee, role_name):\n        if role_name in self.roles:\n            employee.role = self.roles[role_name]\n            print(f\"Role '{role_name}' assigned to {employee.username}\")",
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "Employee",
+        "kind": 6,
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "peekOfCode": "class Employee:\n    def __init__(self, username, password):\n        self.username = username\n        self.password = password\n        self.role = None\n# Usage\nrole_system = RoleManagementSystem()\n# Create roles with respective permissions\nrole_system.create_role(\"Chef\", [\"Order Management\", \"Menu Management\"])\nrole_system.create_role(\"Busboy\", [\"Table Management\"])",
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "role_system",
+        "kind": 5,
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "peekOfCode": "role_system = RoleManagementSystem()\n# Create roles with respective permissions\nrole_system.create_role(\"Chef\", [\"Order Management\", \"Menu Management\"])\nrole_system.create_role(\"Busboy\", [\"Table Management\"])\nrole_system.create_role(\"Waiter\", [\"Order Management\", \"Table Management\", \"Payment Management\"])\nrole_system.create_role(\"Host\", [\"Table Management\"])\nrole_system.create_role(\"Manager\", [\"All Management Systems\"])\nrole_system.create_role(\"Developer\", [\"All Management Systems\"])\n# Create employees\nchef = role_system.login(\"chef\", \"password\")  # Chef",
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "chef",
+        "kind": 5,
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "peekOfCode": "chef = role_system.login(\"chef\", \"password\")  # Chef\nbusboy = role_system.login(\"busboy\", \"password\")  # Busboy\nwaiter = role_system.login(\"waiter\", \"password\")  # Waiter\nhost = role_system.login(\"host\", \"password\")  # Host\nmanager = role_system.login(\"manager\", \"password\")  # Manager\ndeveloper = role_system.login(\"developer\", \"password\")  # Developer\n# Assign roles\nrole_system.assign_role(chef, \"Chef\")\nrole_system.assign_role(busboy, \"Busboy\")\nrole_system.assign_role(waiter, \"Waiter\")",
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "busboy",
+        "kind": 5,
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "peekOfCode": "busboy = role_system.login(\"busboy\", \"password\")  # Busboy\nwaiter = role_system.login(\"waiter\", \"password\")  # Waiter\nhost = role_system.login(\"host\", \"password\")  # Host\nmanager = role_system.login(\"manager\", \"password\")  # Manager\ndeveloper = role_system.login(\"developer\", \"password\")  # Developer\n# Assign roles\nrole_system.assign_role(chef, \"Chef\")\nrole_system.assign_role(busboy, \"Busboy\")\nrole_system.assign_role(waiter, \"Waiter\")\nrole_system.assign_role(host, \"Host\")",
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "waiter",
+        "kind": 5,
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "peekOfCode": "waiter = role_system.login(\"waiter\", \"password\")  # Waiter\nhost = role_system.login(\"host\", \"password\")  # Host\nmanager = role_system.login(\"manager\", \"password\")  # Manager\ndeveloper = role_system.login(\"developer\", \"password\")  # Developer\n# Assign roles\nrole_system.assign_role(chef, \"Chef\")\nrole_system.assign_role(busboy, \"Busboy\")\nrole_system.assign_role(waiter, \"Waiter\")\nrole_system.assign_role(host, \"Host\")\nrole_system.assign_role(manager, \"Manager\")",
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "host",
+        "kind": 5,
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "peekOfCode": "host = role_system.login(\"host\", \"password\")  # Host\nmanager = role_system.login(\"manager\", \"password\")  # Manager\ndeveloper = role_system.login(\"developer\", \"password\")  # Developer\n# Assign roles\nrole_system.assign_role(chef, \"Chef\")\nrole_system.assign_role(busboy, \"Busboy\")\nrole_system.assign_role(waiter, \"Waiter\")\nrole_system.assign_role(host, \"Host\")\nrole_system.assign_role(manager, \"Manager\")\nrole_system.assign_role(developer, \"Developer\")",
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "manager",
+        "kind": 5,
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "peekOfCode": "manager = role_system.login(\"manager\", \"password\")  # Manager\ndeveloper = role_system.login(\"developer\", \"password\")  # Developer\n# Assign roles\nrole_system.assign_role(chef, \"Chef\")\nrole_system.assign_role(busboy, \"Busboy\")\nrole_system.assign_role(waiter, \"Waiter\")\nrole_system.assign_role(host, \"Host\")\nrole_system.assign_role(manager, \"Manager\")\nrole_system.assign_role(developer, \"Developer\")\n# Check permissions",
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "developer",
+        "kind": 5,
+        "importPath": "src.components.rolemanagement",
+        "description": "src.components.rolemanagement",
+        "peekOfCode": "developer = role_system.login(\"developer\", \"password\")  # Developer\n# Assign roles\nrole_system.assign_role(chef, \"Chef\")\nrole_system.assign_role(busboy, \"Busboy\")\nrole_system.assign_role(waiter, \"Waiter\")\nrole_system.assign_role(host, \"Host\")\nrole_system.assign_role(manager, \"Manager\")\nrole_system.assign_role(developer, \"Developer\")\n# Check permissions\nprint(role_system.has_permission(chef, \"Menu Management\"))  # True",
+        "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "TableManagement",
+        "kind": 6,
+        "importPath": "src.components.tablemanagement",
+        "description": "src.components.tablemanagement",
+        "peekOfCode": "class TableManagement:\n    def __init__(self):\n        # Initialize table statuses\n        self.table_status = {}\n        # Initialize table staff assignments\n        self.table_staff = {}\n        # Initialize party sizes\n        self.party_sizes = {}\n    def setTableStatus(self, table_number, status):\n        # Set the status of the specified table",
+        "detail": "src.components.tablemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "makeButton",
+        "kind": 2,
+        "importPath": "src.services.buttonMaker",
+        "description": "src.services.buttonMaker",
+        "peekOfCode": "def makeButton(screen, x: int, y: int, width: int, height: int, text: str=\"\", color: tuple=(0, 0, 0)):\n    font = pygame.font.Font(None, 36)\n    text = font.render(text, True, (0, 0, 0))  # Black text\n    text_rect = text.get_rect(center=(x + width // 2, y + height // 2))\n    button = pygame.draw.rect(screen, color, pygame.Rect(x, y, width, height))\n    screen.blit(text, text_rect)\n    return button",
+        "detail": "src.services.buttonMaker",
+        "documentation": {}
+    },
+    {
+        "label": "chef_clicked",
+        "kind": 2,
+        "importPath": "src.utils.MenuRender.chefButton",
+        "description": "src.utils.MenuRender.chefButton",
+        "peekOfCode": "def chef_clicked(screen, box_rect, display_box, font):\n    if not display_box:\n        print(\"Chef clicked!\")\n        pygame.draw.rect(screen, (255, 90, 0), box_rect)\n        return True\n    elif display_box and box_rect.collidepoint(pygame.mouse.get_pos()):\n        return False\n    return display_box\ndef run_chef_button():\n    pygame.init()",
+        "detail": "src.utils.MenuRender.chefButton",
+        "documentation": {}
+    },
+    {
+        "label": "run_chef_button",
+        "kind": 2,
+        "importPath": "src.utils.MenuRender.chefButton",
+        "description": "src.utils.MenuRender.chefButton",
+        "peekOfCode": "def run_chef_button():\n    pygame.init()\n    # Set up the window\n    screen_width = 800\n    screen_height = 800\n    screen = pygame.display.set_mode((screen_width, screen_height))\n    pygame.display.set_caption(\"Chef Button\")\n    # Create rectangles for the boxes\n    box_rects = [pygame.Rect(screen_width // 2 - 75 + i*200, screen_height // 2 - 100, 150, 200) for i in range(3)]\n    # Create button rectangles for sending out orders",
+        "detail": "src.utils.MenuRender.chefButton",
+        "documentation": {}
+    },
+    {
+        "label": "insert_new_text",
+        "kind": 2,
+        "importPath": "src.utils.MenuRender.managerButton",
+        "description": "src.utils.MenuRender.managerButton",
+        "peekOfCode": "def insert_new_text(new_text):\n    screen_width = 800\n    box_rects = [pygame.Rect(screen_width // 2 - 75 + i*200, 800 // 2 - 100, 150, 200) for i in range(3)]\n    stats_texts = [[\"Stats:\", \"Example Text 1\"], [\"Stats:\", \"Example Text 2\"], [\"Stats:\", \"Example Text 3\"]]\n    display_boxes = [True, True, True]\n    box_rects.append(pygame.Rect(screen_width // 2 - 75 + len(box_rects)*200, 800 // 2 - 100, 150, 200))  # Add a new box\n    stats_texts.append([\"Stats:\", new_text])  # Add the new text\n    display_boxes.append(True)  # Display the new box immediately\n    return box_rects, stats_texts, display_boxes\ndef run_stats_button():",
+        "detail": "src.utils.MenuRender.managerButton",
+        "documentation": {}
+    },
+    {
+        "label": "run_stats_button",
+        "kind": 2,
+        "importPath": "src.utils.MenuRender.managerButton",
+        "description": "src.utils.MenuRender.managerButton",
+        "peekOfCode": "def run_stats_button():\n    pygame.init()\n    # Set up the window\n    screen_width = 800\n    screen_height = 800\n    screen = pygame.display.set_mode((screen_width, screen_height))\n    pygame.display.set_caption(\"Stats Button\")\n    # Create rectangles for the boxes\n    box_rects = [pygame.Rect(screen_width // 2 - 75 + i*200, screen_height // 2 - 100, 150, 200) for i in range(3)]\n    font = pygame.font.Font(None, 24)  # Font for the text",
+        "detail": "src.utils.MenuRender.managerButton",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.utils.MenuRender.managerButton",
+        "description": "src.utils.MenuRender.managerButton",
+        "peekOfCode": "def main():\n    run_stats_button()\nif __name__ == \"__main__\":\n    main()",
+        "detail": "src.utils.MenuRender.managerButton",
+        "documentation": {}
+    },
+    {
+        "label": "table_clicked",
+        "kind": 2,
+        "importPath": "src.utils.MenuRender.waiterButton",
+        "description": "src.utils.MenuRender.waiterButton",
+        "peekOfCode": "def table_clicked(screen, box_rect, display_box):\n    if not display_box:\n        print(\"Table 1 clicked!\")\n        pygame.draw.rect(screen, (255, 90, 0), box_rect)\n        return True\n    elif display_box and box_rect.collidepoint(pygame.mouse.get_pos()):\n        return False\n    return display_box\ndef run_waiter_button():\n    pygame.init()",
+        "detail": "src.utils.MenuRender.waiterButton",
+        "documentation": {}
+    },
+    {
+        "label": "run_waiter_button",
+        "kind": 2,
+        "importPath": "src.utils.MenuRender.waiterButton",
+        "description": "src.utils.MenuRender.waiterButton",
+        "peekOfCode": "def run_waiter_button():\n    pygame.init()\n    # Set up the window\n    screen_width = 800\n    screen_height = 800\n    screen = pygame.display.set_mode((screen_width, screen_height))\n    pygame.display.set_caption(\"Waiter Button\")\n    # Create a button rectangle for the table\n    table_rect = pygame.Rect(screen_width // 2 - 50, screen_height // 2 - 25, 100, 50)\n    # Create a rectangle for the box",
+        "detail": "src.utils.MenuRender.waiterButton",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.utils.MenuRender.waiterButton",
+        "description": "src.utils.MenuRender.waiterButton",
+        "peekOfCode": "def main():\n    run_waiter_button()\nif __name__ == \"__main__\":\n    main()",
+        "detail": "src.utils.MenuRender.waiterButton",
+        "documentation": {}
+    },
+    {
+        "label": "Employee",
+        "kind": 6,
+        "importPath": "src.utils.roles.basicClass",
+        "description": "src.utils.roles.basicClass",
+        "peekOfCode": "class Employee:\n    def __init__(self, employee_id, first_name, last_name, password, username):\n        self.employee_id = employee_id\n        self.first_name = first_name\n        self.last_name = last_name\n        self.password = password\n        self.username = username",
+        "detail": "src.utils.roles.basicClass",
+        "documentation": {}
+    },
+    {
+        "label": "BusBoy",
+        "kind": 6,
+        "importPath": "src.utils.roles.busboy",
+        "description": "src.utils.roles.busboy",
+        "peekOfCode": "class BusBoy(TableManagement):\n    def __init__(self):\n        super().__init__()\n    def getTableStatus(self, table_number):\n        # Access TableManagement to get the status of a table\n        return super().getTableStatus(table_number)\n    def setTableStatus(self, table_number, status):\n        # Access TableManagement to set the status of a table\n        super().setTableStatus(table_number, status)",
+        "detail": "src.utils.roles.busboy",
+        "documentation": {}
+    },
+    {
+        "label": "ChefClass",
+        "kind": 6,
+        "importPath": "src.utils.roles.chefClass",
+        "description": "src.utils.roles.chefClass",
+        "peekOfCode": "class ChefClass(BasicClass):\n    def __init__(self, name, order, menuItem):\n        super().__init__(name)\n        self.order = order\n        self.menuItem = menuItem\n    def get_order(self):\n        return self.order\n    def set_order(self, order):\n        self.order = order\n    def get_menuItem(self):",
+        "detail": "src.utils.roles.chefClass",
+        "documentation": {}
+    },
+    {
+        "label": "Host",
+        "kind": 6,
+        "importPath": "src.utils.roles.host",
+        "description": "src.utils.roles.host",
+        "peekOfCode": "class Host(TableManagement):\n    def __init__(self):\n        super().__init__()\n    def getTableStatus(self, table_number):\n        # Access TableManagement to get the status of a table\n        return super().getTableStatus(table_number)\n    def setTableStatus(self, table_number, status):\n        # Access TableManagement to set the status of a table\n        super().setTableStatus(table_number, status)\n    def setPartySize(self, party_size, table_number):",
+        "detail": "src.utils.roles.host",
+        "documentation": {}
+    },
+    {
+        "label": "ManagerClass",
+        "kind": 6,
+        "importPath": "src.utils.roles.ManagerClass",
+        "description": "src.utils.roles.ManagerClass",
+        "peekOfCode": "class ManagerClass(BasicClass):\n    def __init__(self, name):\n        super().__init__(name)\n    def add_item_to_database(self, specs):\n        pass\n    def remove_item_from_database(self, specs):\n        pass\n    def change_item_status(self, item, new_status):\n        pass\n    def see_hourly_financial_data(self):",
+        "detail": "src.utils.roles.ManagerClass",
+        "documentation": {}
+    },
+    {
+        "label": "WaiterClass",
+        "kind": 6,
+        "importPath": "src.utils.roles.waiterClass",
+        "description": "src.utils.roles.waiterClass",
+        "peekOfCode": "class WaiterClass(BasicClass):\n    def __init__(self, name, tableStatus, tableNumber, Order, Bill):\n        super().__init__(name)\n        self.tableStatus = tableStatus\n        self.tableNumber = tableNumber\n        self.Order = Order\n        self.Bill = Bill\n    def checkTableStatus(self):\n        return self.tableStatus\n    def getTableNumber(self):",
+        "detail": "src.utils.roles.waiterClass",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    pygame.init()\n    screen = pygame.display.set_mode((800, 800))\n    pygame.display.set_caption(\"Button Example\")\n    while True:\n        screen.fill((255, 255, 255))\n        chefButton = makeButton(screen, 350, 150, 120, 50, \"Chef\", (50, 168, 82))\n        waiterButton = makeButton(screen, 350, 225, 120, 50, \"waiter\", (50, 168, 82))\n        ManagerButton = makeButton(screen, 350, 300, 120, 50, \"manager\", (50, 168, 82))\n        for event in pygame.event.get():",
+        "detail": "main",
+        "documentation": {}
+    }
+]
