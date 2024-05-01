@@ -21,7 +21,7 @@ class Item:
 
     #convert to string
     def __str__(self):
-        return f"{self.name} - ${self.price:.2f}"
+        return f"{self.name} - ${self.price:.2f} ({'Available' if self.availability else 'Out of stock'})"
 
 class Menu:
     #constructor
