@@ -60,6 +60,8 @@
 - Can accept information in decided upon format and transfer it into code
 - Can pull information from data file
 - Can write data to data file
+- Can display data in hourly and daily form
+
 #TODO#
 -Preform data analysis based on time and date
 -Create a way by which to modify data from within the program.
