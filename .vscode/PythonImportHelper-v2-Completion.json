@@ -36,19 +36,11 @@
         "documentation": {}
     },
     {
-        "label": "chef_clicked",
-        "importPath": "src.utils.MenuRender.chefButton",
-        "description": "src.utils.MenuRender.chefButton",
+        "label": "testchef_clicked",
+        "importPath": "src.components.chefButton",
+        "description": "src.components.chefButton",
         "isExtraImport": true,
-        "detail": "src.utils.MenuRender.chefButton",
-        "documentation": {}
-    },
-    {
-        "label": "run_chef_button",
-        "importPath": "src.utils.MenuRender.chefButton",
-        "description": "src.utils.MenuRender.chefButton",
-        "isExtraImport": true,
-        "detail": "src.utils.MenuRender.chefButton",
+        "detail": "src.components.chefButton",
         "documentation": {}
     },
     {
@@ -92,23 +84,7 @@
         "documentation": {}
     },
     {
-        "label": "Order",
-        "importPath": "src.components.OrderManagement",
-        "description": "src.components.OrderManagement",
-        "isExtraImport": true,
-        "detail": "src.components.OrderManagement",
-        "documentation": {}
-    },
-    {
-        "label": "TableOrder",
-        "importPath": "src.components.OrderManagement",
-        "description": "src.components.OrderManagement",
-        "isExtraImport": true,
-        "detail": "src.components.OrderManagement",
-        "documentation": {}
-    },
-    {
-        "label": "Orders",
+        "label": "*",
         "importPath": "src.components.OrderManagement",
         "description": "src.components.OrderManagement",
         "isExtraImport": true,
@@ -145,6 +121,54 @@
         "description": "src.components.rolemanagement",
         "isExtraImport": true,
         "detail": "src.components.rolemanagement",
+        "documentation": {}
+    },
+    {
+        "label": "insert_new_text",
+        "importPath": "src.utils.MenuRender.managerButton",
+        "description": "src.utils.MenuRender.managerButton",
+        "isExtraImport": true,
+        "detail": "src.utils.MenuRender.managerButton",
+        "documentation": {}
+    },
+    {
+        "label": "insert_new_text",
+        "importPath": "src.utils.MenuRender.managerButton",
+        "description": "src.utils.MenuRender.managerButton",
+        "isExtraImport": true,
+        "detail": "src.utils.MenuRender.managerButton",
+        "documentation": {}
+    },
+    {
+        "label": "insert_new_text",
+        "importPath": "src.utils.MenuRender.managerButton",
+        "description": "src.utils.MenuRender.managerButton",
+        "isExtraImport": true,
+        "detail": "src.utils.MenuRender.managerButton",
+        "documentation": {}
+    },
+    {
+        "label": "run_stats_button",
+        "importPath": "src.utils.MenuRender.managerButton",
+        "description": "src.utils.MenuRender.managerButton",
+        "isExtraImport": true,
+        "detail": "src.utils.MenuRender.managerButton",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "MenuRender.OrderManagement",
+        "description": "MenuRender.OrderManagement",
+        "isExtraImport": true,
+        "detail": "MenuRender.OrderManagement",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "MenuRender.OrderManagement",
+        "description": "MenuRender.OrderManagement",
+        "isExtraImport": true,
+        "detail": "MenuRender.OrderManagement",
         "documentation": {}
     },
     {
@@ -188,19 +212,11 @@
         "documentation": {}
     },
     {
-        "label": "insert_new_text",
-        "importPath": "src.utils.MenuRender.managerButton",
-        "description": "src.utils.MenuRender.managerButton",
+        "label": "run_chef_button",
+        "importPath": "src.utils.MenuRender.chefButton",
+        "description": "src.utils.MenuRender.chefButton",
         "isExtraImport": true,
-        "detail": "src.utils.MenuRender.managerButton",
-        "documentation": {}
-    },
-    {
-        "label": "run_stats_button",
-        "importPath": "src.utils.MenuRender.managerButton",
-        "description": "src.utils.MenuRender.managerButton",
-        "isExtraImport": true,
-        "detail": "src.utils.MenuRender.managerButton",
+        "detail": "src.utils.MenuRender.chefButton",
         "documentation": {}
     },
     {
@@ -210,6 +226,24 @@
         "description": ".tests.tests",
         "peekOfCode": "class TestChefButton(unittest.TestCase):\n    def setUp(self):\n        pygame.init()\n        self.screen = pygame.display.set_mode((800, 800))\n        self.box_rect = pygame.Rect(400, 400, 150, 200)\n        self.font = pygame.font.Font(None, 24)\n        self.employee_management = EmployeeManagement(\"Test\")\n        self.item1 = Item(\"Chicken\", 10.0, 1, 5.0, True)\n        self.item2 = Item(\"Beef\", 15.0, 2, 7.5, True)\n        self.menu = Menu()",
         "detail": ".tests.tests",
+        "documentation": {}
+    },
+    {
+        "label": "testchef_clicked",
+        "kind": 2,
+        "importPath": "src.components.chefButton",
+        "description": "src.components.chefButton",
+        "peekOfCode": "def testchef_clicked(screen, box_rect, display_box, font):\n    if not display_box:\n        print(\"Chef clicked!\")\n        pygame.draw.rect(screen, (255, 90, 0), box_rect)\n        return True\n    elif display_box and box_rect.collidepoint(pygame.mouse.get_pos()):\n        return False\n    return display_box\ndef testrun_chef_button():\n    pygame.init()",
+        "detail": "src.components.chefButton",
+        "documentation": {}
+    },
+    {
+        "label": "testrun_chef_button",
+        "kind": 2,
+        "importPath": "src.components.chefButton",
+        "description": "src.components.chefButton",
+        "peekOfCode": "def testrun_chef_button():\n    pygame.init()\n    # Set up the window\n    screen_width = 800\n    screen_height = 800\n    screen = pygame.display.set_mode((screen_width, screen_height))\n    pygame.display.set_caption(\"Chef Button\")\n    # Create rectangles for the boxes\n    box_rects = [pygame.Rect(screen_width // 2 - 75 + i*200, screen_height // 2 - 100, 150, 200) for i in range(3)]\n    # Create button rectangles for sending out orders",
+        "detail": "src.components.chefButton",
         "documentation": {}
     },
     {
@@ -253,7 +287,7 @@
         "kind": 6,
         "importPath": "src.components.OrderManagement",
         "description": "src.components.OrderManagement",
-        "peekOfCode": "class Order:\n    #constructor\n    def __init__ (self):\n        #a number will be assigned later on in Orders\n        self.orderNumber = 0\n        #a list to store item in an order\n        self.items = []\n        #a boolean status with true being the order haven't finish\n        self.status = True\n    #set number status",
+        "peekOfCode": "class Order:\n    #constructor\n    it = 0\n    items = []\n    def __init__ (self):\n        #a number will be assigned later on in Orders\n        self.orderNumber = 0\n        #a list to store item in an order\n        #a boolean status with true being the order haven't finish\n        self.status = True",
         "detail": "src.components.OrderManagement",
         "documentation": {}
     },
@@ -406,7 +440,7 @@
         "kind": 2,
         "importPath": "src.utils.MenuRender.chefButton",
         "description": "src.utils.MenuRender.chefButton",
-        "peekOfCode": "def run_chef_button():\n    pygame.init()\n    # Set up the window\n    screen_width = 800\n    screen_height = 800\n    screen = pygame.display.set_mode((screen_width, screen_height))\n    pygame.display.set_caption(\"Chef Button\")\n    # Create rectangles for the boxes\n    box_rects = [pygame.Rect(screen_width // 2 - 75 + i*200, screen_height // 2 - 100, 150, 200) for i in range(3)]\n    # Create button rectangles for sending out orders",
+        "peekOfCode": "def run_chef_button():\n    pygame.init()\n    # Set up the window\n    screen_width = 800\n    screen_height = 800\n    screen = pygame.display.set_mode((screen_width, screen_height))\n    pygame.display.set_caption(\"Chef Button\")\n    order = Order()\n    # Create rectangles for the boxes\n    box_rects = [pygame.Rect(screen_width // 2 - 75 + i*200, screen_height // 2 - 100, 150, 200) for i in range(3)]",
         "detail": "src.utils.MenuRender.chefButton",
         "documentation": {}
     },
@@ -435,6 +469,33 @@
         "description": "src.utils.MenuRender.managerButton",
         "peekOfCode": "def main():\n    run_stats_button()\nif __name__ == \"__main__\":\n    main()",
         "detail": "src.utils.MenuRender.managerButton",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "kind": 6,
+        "importPath": "src.utils.MenuRender.OrderManagement",
+        "description": "src.utils.MenuRender.OrderManagement",
+        "peekOfCode": "class Order:\n    #constructor\n    it = 0\n    items = []\n    def __init__ (self):\n        #a number will be assigned later on in Orders\n        self.orderNumber = 0\n        #a list to store item in an order\n        #a boolean status with true being the order haven't finish\n        self.status = True",
+        "detail": "src.utils.MenuRender.OrderManagement",
+        "documentation": {}
+    },
+    {
+        "label": "TableOrder",
+        "kind": 6,
+        "importPath": "src.utils.MenuRender.OrderManagement",
+        "description": "src.utils.MenuRender.OrderManagement",
+        "peekOfCode": "class TableOrder:\n    def __init__(self, table_number):\n        self.table_number = table_number\n        self.orders = []\n    def add_order(self, order):\n        self.orders.append(order)\n    def remove_order(self, order):\n        if order in self.orders:\n            self.orders.remove(order)\n        else:",
+        "detail": "src.utils.MenuRender.OrderManagement",
+        "documentation": {}
+    },
+    {
+        "label": "Orders",
+        "kind": 6,
+        "importPath": "src.utils.MenuRender.OrderManagement",
+        "description": "src.utils.MenuRender.OrderManagement",
+        "peekOfCode": "class Orders():\n    #constructor\n    def __init__(self):\n        self.orders = []\n        self.completedOrder = []\n    #get the order with the given index from the order system\n    def getOrder(self, index):\n        if (self.orders.__sizeof__ - 1 > index):\n            return (self.orders[index])\n        else:",
+        "detail": "src.utils.MenuRender.OrderManagement",
         "documentation": {}
     },
     {

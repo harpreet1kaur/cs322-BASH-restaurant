@@ -5,11 +5,12 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 import unittest
 import pygame
 
-from src.utils.MenuRender.chefButton import chef_clicked
+#from src.utils.MenuRender.chefButton import chef_clicked
+from src.components.chefButton import testchef_clicked
 from src.utils.MenuRender.waiterButton import table_clicked
 from src.components.EmployementManagementSystem import EmployeeManagement
 from src.components.MenuManagement import Item, Menu
-from src.components.OrderManagement import Order, TableOrder, Orders
+from src.components.OrderManagement import *
 from src.components.tablemanagement import TableManagement
 from src.components.rolemanagement import Role, Employee, RoleManagementSystem
 class TestChefButton(unittest.TestCase):
@@ -31,13 +32,13 @@ class TestChefButton(unittest.TestCase):
         
         
     def test_chef_clicked(self):
-        self.assertEqual(chef_clicked(self.screen, self.box_rect, False, self.font), True)
+        self.assertEqual(testchef_clicked(self.screen, self.box_rect, False, self.font), True)
 
         pygame.mouse.set_pos((450, 450))
-        self.assertEqual(chef_clicked(self.screen, self.box_rect, False, self.font), True)
+        self.assertEqual(testchef_clicked(self.screen, self.box_rect, False, self.font), True)
 
         pygame.mouse.set_pos((0, 0))
-        self.assertEqual(chef_clicked(self.screen, self.box_rect, True, self.font), True)
+        self.assertEqual(testchef_clicked(self.screen, self.box_rect, True, self.font), True)
 
     def test_table_clicked(self):
         self.assertEqual(table_clicked(self.screen, self.box_rect, False), True)

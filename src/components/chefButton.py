@@ -1,7 +1,6 @@
 import pygame
-from MenuRender.OrderManagement import *
 
-def chef_clicked(screen, box_rect, display_box, font):
+def testchef_clicked(screen, box_rect, display_box, font):
     if not display_box:
         print("Chef clicked!")
         pygame.draw.rect(screen, (255, 90, 0), box_rect)
@@ -10,7 +9,7 @@ def chef_clicked(screen, box_rect, display_box, font):
         return False
     return display_box
 
-def run_chef_button():
+def testrun_chef_button():
     pygame.init()
 
     # Set up the window
@@ -18,7 +17,6 @@ def run_chef_button():
     screen_height = 800
     screen = pygame.display.set_mode((screen_width, screen_height))
     pygame.display.set_caption("Chef Button")
-    order = Order()
     # Create rectangles for the boxes
     box_rects = [pygame.Rect(screen_width // 2 - 75 + i*200, screen_height // 2 - 100, 150, 200) for i in range(3)]
 
@@ -26,8 +24,7 @@ def run_chef_button():
     send_rects = [pygame.Rect(screen_width // 2 - 75 + i*200, screen_height // 2 + 125, 150, 50) for i in range(3)]
 
     font = pygame.font.Font(None, 24)  # Font for the order text
-    items = order.getItems()
-    order_texts = [["Orders:", "Table 1: {}".format(items)], ["Orders:", "Table 2: Fish"], ["Orders:", "Table 3: Steak"]]
+    order_texts = [["Orders:", "Table 1: test"], ["Orders:", "Table 2: Fish"], ["Orders:", "Table 3: Steak"]]
 
     display_boxes = [True, True, True]  # Initialize as True to display the order text immediately
 

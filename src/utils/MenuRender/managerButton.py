@@ -25,7 +25,7 @@ def run_stats_button():
     box_rects = [pygame.Rect(screen_width // 2 - 75 + i*200, screen_height // 2 - 100, 150, 200) for i in range(3)]
 
     font = pygame.font.Font(None, 24)  # Font for the text
-    stats_texts = [["Stats:", "Example Text 1"], ["Stats:", "Example Text 2"], ["Stats:", "Example Text 3"]]
+    stats_texts = [["Popular Item:", "Chicken"], ["Stats:", "Example Text 2"], ["Stats:", "Example Text 3"]]
 
     display_boxes = [True, True, True]  # Initialize as True to display the text immediately
 

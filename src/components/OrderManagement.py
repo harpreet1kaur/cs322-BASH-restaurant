@@ -1,10 +1,13 @@
+from src.utils.MenuRender.managerButton import insert_new_text
+
 class Order:
     #constructor
+    it = 0
+    items = []
     def __init__ (self):
         #a number will be assigned later on in Orders
         self.orderNumber = 0
         #a list to store item in an order
-        self.items = []
         #a boolean status with true being the order haven't finish
         self.status = True
 
@@ -17,8 +20,8 @@ class Order:
     #add item into the order
     def addItem(self, item):
         #if the order status is true, add it to the order
-        if(item.status == True):
-            self.items.append(item)
+        if(item != None):
+            Order.items.append(item)
         else:
             print("Order not available")
             
@@ -29,6 +32,13 @@ class Order:
             self.items.remove(item)
         else:
             print("Item not in the order")
+            
+    def clearItems(self):
+        self.items = []
+        
+    def getItems(self):
+        print(Order.items)
+        return str(Order.items[0])
 
 class TableOrder:
     def __init__(self, table_number):

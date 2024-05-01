@@ -1,4 +1,8 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import pygame
+from MenuRender.OrderManagement import *
 
 def table_clicked(screen, box_rect, display_box):
     if not display_box:
@@ -33,7 +37,7 @@ def run_waiter_button():
     order_text = ["Orders:", "Table 1:"]
 
     display_box = False
-
+    order = Order()
     running = True
     while running:
         screen.fill((255, 255, 255))  # Fill the screen with white color
@@ -52,10 +56,23 @@ def run_waiter_button():
                         display_box = False
                     elif chicken_rect.collidepoint(event.pos):
                         order_text[1] = "Table 1: Chicken"  # Update the "Table 1" order
+                        
+                        order.clearItems()
+                        order.addItem("Chicken")
+                        items = order.getItems()
+
                     elif beef_rect.collidepoint(event.pos):
                         order_text[1] = "Table 1: Beef"  # Update the "Table 1" order
+                        order.addItem("Beef")
+                        order.clearItems()
+                        items = order.getItems()
+
                     elif carrots_rect.collidepoint(event.pos):
                         order_text[1] = "Table 1: Carrots"  # Update the "Table 1" order
+                        order.addItem("Carrots")
+                        order.clearItems()
+                        items = order.getItems()
+  
 
         pygame.draw.rect(screen, (0, 0, 255), table_rect)  # Draw the table rectangle
         screen.blit(font.render("Table 1", True, (0, 0, 0)), (table_rect.x + 10, table_rect.y + 10))  # Draw "Table 1" on the table rectangle

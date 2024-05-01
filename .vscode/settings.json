@@ -1,6 +1,7 @@
 {
   "python.analysis.extraPaths": [
     "./src/components",
-    "./src/utils/MenuRender"
+    "./src/utils/MenuRender",
+    "./src/utils"
   ]
 }
